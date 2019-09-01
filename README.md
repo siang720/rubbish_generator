@@ -47,8 +47,6 @@ $ npm install -g nodemon
 npm run dev
 ```
 
-6. Use web browser to open this url
-   https://localhost:3000
+6. Use web browser to open this url: https://localhost:3000
 
-7. How to Close Node.js server
-   press control + c
+7. How to Close Node.js server: press control + c
