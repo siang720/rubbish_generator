@@ -1,0 +1,59 @@
+<!--  ./views/index.handlebars -->
+<div class="container py-3">
+  <h1 class='text-center'>你想對誰說幹話？</h1>
+  <form method="POST" action="/">
+    <div class="card-deck my-5">
+
+      <div class="card">
+        <div class="bg-white" style="height: 85%;">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+            alt="angry developer" class="card-img-top img-fluid">
+        </div>
+        <div class="card-body">
+          <div class="custom-control custom-radio text-center">
+            <input type="radio" class="custom-control-input" name="jobs" value="engineer" id="engineer"
+              {{#ifEquals job 'engineer'}} checked {{/ifEquals}}>
+            <label class="custom-control-label" for="engineer">工程師</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="bg-white" style="height: 85%;">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+            alt="angry designer" class="card-img-top img-fluid">
+        </div>
+        <div class="card-body">
+          <div class="custom-control custom-radio text-center">
+            <input type="radio" class="custom-control-input" name="jobs" value="designer" id="designer"
+              {{#ifEquals job 'designer'}} checked {{/ifEquals}}>
+            <label class="custom-control-label" for="designer">設計師</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="bg-white" style="height: 85%;">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+            alt="angry founder" class="card-img-top img-fluid">
+        </div>
+        <div class="card-body">
+          <div class="custom-control custom-radio text-center">
+            <input type="radio" class="custom-control-input" name="jobs" value="entrepreneur" id="entrepreneur"
+              {{#ifEquals job 'entrepreneur'}} checked {{/ifEquals}}>
+            <label class="custom-control-label" for="entrepreneur">創業家</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mb-3">
+      <button type="submit" class="btn btn-dark">產生幹話</button>
+    </div>
+    <h4 class="bg-warning text-center rounded py-2" style="min-height: 50px;">
+      {{#if rubbish}}
+      {{rubbish}}
+      {{/if}}
+    </h4>
+  </form>
+</div>
